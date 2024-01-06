@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo List</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+    <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+
+<div class="todo-container">
+    <div class="todo-header">
+        <h2><i class="fas fa-tasks"></i> Todo List</h2>
+    </div>
+    <div class="add-todo">
+        <input type="text" id="newTodoTitle" placeholder="Add a new todo">
+        <input type="text" id="newTodoDescription" placeholder="Add a description">
+
+        <select id="newTodoCompleted">
+            <option value="false">Not Completed</option>
+            <option value="true">Completed</option>
+        </select>
+
+        <button onclick="addTodo()">Add</button>
+    </div>
+    <table class="todo-table">
+        <thead>
+        <tr>
+            <th>ID</th>
+            <th>Title</th>
+            <th>Description</th>
+            <th>Completed</th>
+            <th>Action</th>
+        </tr>
+        </thead>
+        <tbody id="todoList">
+        <!-- Todo items will be added dynamically here -->
+        </tbody>
+    </table>
+</div>
+
+<script src="app.js"></script>
+</body>
+
+</html>
